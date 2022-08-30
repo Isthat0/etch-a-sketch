@@ -18,15 +18,16 @@ for (let i = 0; i < playerChoice; i++){
     container.appendChild(divColumn);
 }
 
-let columnSelector = document.getElementsByClassName('.column');
-console.log(columnSelector.length);
+const rowSelector = document.querySelectorAll('.row');
+console.log(rowSelector[2]);
 
-for( let i = 0; i < columnSelector.length; i++){
-    console.log(columnSelector[i]);
+
+
+for (let i = 0; i < rowSelector.length; i++){
+    rowSelector[i].addEventListener('mouseover', () =>{
+        rowSelector[i].style.backgroundColor = 'blue';
+    })
+    /*rowSelector[i].addEventListener('mouseout', () =>{
+        rowSelector[i].style.backgroundColor = 'white';
+    })*/
 }
-let rowSelector = document.getElementsByClassName('.row');;
-console.log(rowSelector);
-
-
-
-
